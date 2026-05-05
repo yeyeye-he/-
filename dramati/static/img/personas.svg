@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <style>
+      .ln { fill: none; stroke: #1e1a24; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .eye { fill: #1e1a24; }
+      .ic1 { fill: #33A474; }
+      .ic2 { fill: #267A5A; }
+      .ie1 { fill: #E7AE30; }
+      .ie2 { fill: #C49220; }
+      .bc1 { fill: #4298B4; }
+      .bc2 { fill: #2F7A92; }
+      .be1 { fill: #88619F; }
+      .be2 { fill: #6B4A82; }
+      .skin { fill: #f2d4c2; stroke: #1e1a24; stroke-width: 1.4; }
+    </style>
+  </defs>
+  <!-- Low-poly 16personalities-inspired: 4-color families IC/IE/BC/BE; original geometry -->
+  <symbol id="ICST" viewBox="0 0 100 120">
+    <polygon class="ic2" points="32,48 68,48 62,92 38,92"/>
+    <polygon class="ic1" points="38,50 62,50 58,88 42,88"/>
+    <polygon class="ic2" points="40,28 60,28 56,46 44,46"/>
+    <ellipse class="skin" cx="50" cy="36" rx="11" ry="12"/>
+    <circle class="eye" cx="46" cy="36" r="1.6"/><circle class="eye" cx="54" cy="36" r="1.6"/>
+    <path class="ln" d="M48 40h4"/>
+    <polygon fill="#5aaed4" points="24,44 30,58 18,54"/>
+    <polygon fill="#d4c4a8" points="70,62 88,58 82,76"/>
+  </symbol>
+  <symbol id="ICSG" viewBox="0 0 100 120">
+    <polygon fill="#f0d060" points="50,6 22,40 78,40" opacity="0.9"/>
+    <polygon class="ic2" points="34,50 66,50 60,94 40,94"/>
+    <polygon class="ic1" points="40,52 60,52 56,90 44,90"/>
+    <polygon class="ic2" points="42,30 58,30 54,48 46,48"/>
+    <ellipse class="skin" cx="50" cy="38" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="38" r="1.6"/><circle class="eye" cx="54" cy="38" r="1.6"/>
+    <polygon fill="#c9b565" points="48,18 52,18 50,26"/>
+  </symbol>
+  <symbol id="ICQT" viewBox="0 0 100 120">
+    <polygon class="ic2" points="30,52 70,52 64,96 36,96"/>
+    <polygon class="ic1" points="36,54 64,54 60,92 40,92"/>
+    <polygon class="ic2" points="40,30 60,30 56,50 44,50"/>
+    <ellipse class="skin" cx="50" cy="38" rx="10" ry="11"/>
+    <circle class="eye" cx="47" cy="38" r="1.5"/><circle class="eye" cx="53" cy="38" r="1.5"/>
+    <polygon fill="#e8dcc4" stroke="#1e1a24" stroke-width="1.2" points="58,48 82,44 78,72 56,68"/>
+    <path class="ln" d="M62 52h14M62 58h12M62 64h10" stroke-width="1"/>
+  </symbol>
+  <symbol id="ICQG" viewBox="0 0 100 120">
+    <polygon class="ic2" points="34,50 66,50 62,94 38,94"/>
+    <polygon class="ic1" points="40,52 60,52 56,90 44,90"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <path class="ln" d="M22 22h56v56H22z" stroke-dasharray="5 3"/>
+  </symbol>
+  <symbol id="IEST" viewBox="0 0 100 120">
+    <polygon class="ie2" points="32,50 68,50 64,96 36,96"/>
+    <polygon class="ie1" points="38,52 62,52 58,92 42,92"/>
+    <polygon class="ie2" points="38,28 62,28 58,48 42,48"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.6"/><circle class="eye" cx="54" cy="36" r="1.6"/>
+    <polygon fill="#c44" points="62,40 78,34 74,50"/>
+  </symbol>
+  <symbol id="IESG" viewBox="0 0 100 120">
+    <polygon fill="#fde9a8" points="50,4 14,42 86,42"/>
+    <polygon class="ie2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="ie1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="38" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="40" r="1.6"/><circle class="eye" cx="54" cy="40" r="1.6"/>
+  </symbol>
+  <symbol id="IEQT" viewBox="0 0 100 120">
+    <polygon class="ie2" points="36,52 64,52 60,96 40,96"/>
+    <polygon class="ie1" points="40,54 60,54 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <polygon fill="#f0d040" points="68,18 76,28 60,30"/>
+  </symbol>
+  <symbol id="IEQG" viewBox="0 0 100 120">
+    <polygon class="ie2" points="34,52 66,52 62,96 38,96"/>
+    <polygon class="ie1" points="40,54 60,54 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <path class="ln" d="M24 20h40v28H24zM28 24h32v20H28z" opacity="0.7"/>
+  </symbol>
+  <symbol id="BCST" viewBox="0 0 100 120">
+    <polygon class="bc2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="bc1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <polygon fill="#7ec8e8" points="30,40 36,52 24,48"/>
+    <path class="ln" d="M22 100h56" stroke-width="1" stroke-dasharray="3 2"/>
+  </symbol>
+  <symbol id="BCSG" viewBox="0 0 100 120">
+    <polygon class="bc2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="bc1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <path class="ln" d="M28 32c0-10 44-10 44 0M30 34h8M62 34h8"/>
+    <path class="ln" d="M24 50 Q50 64 76 50"/>
+  </symbol>
+  <symbol id="BCQT" viewBox="0 0 100 120">
+    <polygon class="bc2" points="36,52 64,52 60,96 40,96"/>
+    <polygon class="bc1" points="40,54 60,54 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <rect fill="#b8dfe8" stroke="#1e1a24" stroke-width="1" x="58" y="50" width="20" height="26" rx="1"/>
+  </symbol>
+  <symbol id="BCQG" viewBox="0 0 100 120">
+    <polygon class="bc1" points="34,52 50,52 48,94 36,94"/>
+    <polygon class="bc2" points="50,52 66,52 64,94 52,94"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <line class="ln" x1="50" y1="40" x2="50" y2="90" stroke="#5ad4e0" stroke-dasharray="3 2"/>
+  </symbol>
+  <symbol id="BEST" viewBox="0 0 100 120">
+    <polygon class="be2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="be1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <polygon class="be2" points="32,88 50,82 68,88 68,96 32,96"/>
+    <path class="ln" d="M40 92h20M50 88v8"/>
+  </symbol>
+  <symbol id="BESG" viewBox="0 0 100 120">
+    <polygon class="be2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="be1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="11" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <circle fill="none" stroke="#1e1a24" stroke-width="1.8" cx="72" cy="56" r="9"/>
+    <line class="ln" x1="64" y1="56" x2="52" y2="48"/>
+  </symbol>
+  <symbol id="BEQT" viewBox="0 0 100 120">
+    <polygon class="be2" points="36,52 64,52 60,96 40,96"/>
+    <polygon class="be1" points="40,54 60,54 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="34" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="34" r="1.5"/><circle class="eye" cx="54" cy="34" r="1.5"/>
+    <ellipse fill="none" stroke="#b8a0d4" stroke-width="1.6" cx="50" cy="108" rx="28" ry="10" opacity="0.8"/>
+  </symbol>
+  <symbol id="BEQG" viewBox="0 0 100 120">
+    <polygon class="be2" points="34,50 66,50 62,96 38,96"/>
+    <polygon class="be1" points="40,52 60,52 56,92 44,92"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <path class="ln" d="M22 48h44v36H22zM26 52h36v28H26z" opacity="0.65"/>
+  </symbol>
+  <symbol id="UNKNOWN" viewBox="0 0 100 120">
+    <polygon fill="#9d96b0" points="36,52 64,52 60,96 40,96"/>
+    <ellipse class="skin" cx="50" cy="36" rx="10" ry="11"/>
+    <circle class="eye" cx="46" cy="36" r="1.5"/><circle class="eye" cx="54" cy="36" r="1.5"/>
+    <path class="ln" d="M46 20q4 6 0 12q-4-6 0-12"/>
+  </symbol>
+</svg>
