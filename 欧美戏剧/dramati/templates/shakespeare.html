@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DRAMA-TI · 莎士比亚戏剧专题测</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="body-shakespeare">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="page">
+    <header class="hero">
+      <div class="ticket ticket-shakespeare" aria-hidden="true">
+        <span class="ticket-k">SHAKESPEARE</span>
+        <span class="ticket-v">专题卷</span>
+      </div>
+      <p class="eyebrow">仅供娱乐 · 与总测共用十六型算法</p>
+      <h1 id="app-title">莎士比亚戏剧 · 人格小测</h1>
+      <p id="app-subtitle" class="lede">
+        本卷<strong>18 题</strong>，题干只谈莎翁文本、改编与现场想象；不分「稀客 / 课表 / 老观众」，答完同样得到 DRAMA-TI 十六型代号。
+      </p>
+      <p id="app-disclaimer" class="fineprint"></p>
+    </header>
+
+    <section id="screen-intro" class="card intro-card">
+      <h2 class="card-title">专卷入场</h2>
+      <p class="audience-lead">
+        若你更想测「泛泛的看戏习惯」，请回<a href="/">总入口</a>选择三种观戏人之一。这里只服务：<strong>哈姆雷特、麦克白、李尔、奥赛罗、福斯塔夫……</strong>常在脑子里串门的人。
+      </p>
+      <ul class="intro-list">
+        <li>每题<strong>四选一</strong>，凭第一印象即可。</li>
+        <li>结果与总测<strong>同一套昵称与轴解释</strong>，可与朋友横向比较。</li>
+      </ul>
+
+      <div class="nav-row nav-row-intro">
+        <button type="button" class="btn primary" id="btn-start">开卷：18 题莎翁专题</button>
+        <a class="btn ghost" href="/" id="btn-back-main">返回总测</a>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="card quiz-card hidden" aria-labelledby="quiz-heading">
+      <div class="quiz-top">
+        <div>
+          <span id="quiz-heading" class="q-chip q-chip-shakespeare">莎翁专题</span>
+          <p id="quiz-profile" class="quiz-profile">本卷：莎士比亚戏剧专题 · 18 题</p>
+        </div>
+        <span class="q-progress-num"><span id="q-current">1</span> / <span id="q-total">18</span></span>
+      </div>
+      <div class="progress-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-a11y">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <h2 id="q-prompt" class="q-title"></h2>
+      <div id="q-options" class="options" role="listbox" aria-labelledby="q-prompt"></div>
+      <div class="nav-row">
+        <button type="button" class="btn ghost" id="btn-prev">上一题</button>
+        <button type="button" class="btn ghost primary-lite" id="btn-next" disabled>下一题</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="hidden" aria-live="polite">
+      <div class="card result-hero">
+        <div class="result-figure-wrap" aria-hidden="true">
+          <img id="res-figure-img" class="result-figure-img hidden" alt="" width="240" height="288" decoding="async" />
+          <svg class="result-figure" id="res-figure-svg" width="240" height="288" viewBox="0 0 100 120" role="img"
+            data-sprites="{{ url_for('static', filename='img/personas.svg') }}">
+            <use id="res-figure-use" href="{{ url_for('static', filename='img/personas.svg') }}#UNKNOWN" />
+          </svg>
+        </div>
+        <p class="eyebrow">你的主类型 · 代号</p>
+        <h2 id="res-code" class="code"></h2>
+        <p id="res-name" class="res-name"></p>
+        <p id="res-dramatic" class="res-dramatic" hidden></p>
+        <p id="res-match" class="match"></p>
+        <p id="res-tagline" class="tagline"></p>
+        <div id="axis-tags" class="axis-tags"></div>
+      </div>
+
+      <div class="card result-extra">
+        <details class="details-block" open>
+          <summary class="details-summary">十五个观剧心理侧写 <span class="hint">（条柱越高越明显；下附与戏剧现场相关的说明，仅供自嗨）</span></summary>
+          <div id="sub-bars" class="sub-bars"></div>
+        </details>
+        <p class="result-footnote">本卷为莎士比亚专题题干；分数仍按本题库理论上限归一，仅供自嗨；不构成任何心理诊断或人格定论。</p>
+        <div class="nav-row">
+          <button type="button" class="btn ghost" id="btn-restart">再测一遍专题卷</button>
+          <a class="btn ghost primary-lite" href="/">去总测</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="{{ url_for('static', filename='js/shakespeare.js') }}"></script>
+</body>
+</html>

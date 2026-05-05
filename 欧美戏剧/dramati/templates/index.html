@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DRAMA-TI · 看戏人格小测</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="page">
+    <header class="hero">
+      <div class="ticket" aria-hidden="true">
+        <span class="ticket-k">DRAMA</span>
+        <span class="ticket-v">人格票根</span>
+      </div>
+      <p class="eyebrow">仅供娱乐 · 和 MBTI 一样不当真</p>
+      <h1 id="app-title">DRAMA-TI</h1>
+      <p id="app-subtitle" class="lede"></p>
+      <p id="app-disclaimer" class="fineprint"></p>
+      <p class="module-jump">
+        <a class="module-jump-link" href="/shakespeare">莎士比亚戏剧 · 独立专题测（18 题专卷）</a>
+      </p>
+    </header>
+
+    <section id="screen-intro" class="card intro-card">
+      <h2 class="card-title">先选一句：你更像哪种看戏人？</h2>
+      <p class="audience-lead">
+        我们只留<strong>三种入卷</strong>，不搞一长串选题菜单。差别主要在<strong>题量</strong>和<strong>题干口味</strong>；测的都是「你怎么对待戏剧现场」，结果代号规则相同。
+      </p>
+      <ul class="intro-list">
+        <li>每题<strong>四选一</strong>，选第一眼就好。</li>
+        <li><strong>稀客型</strong>请默认把自己代入：「假如今晚我真的坐在剧场里」。</li>
+        <li>答完全部共 <strong id="q-count">32</strong> 题（随你的选择变化），再提交看十六型昵称。</li>
+      </ul>
+
+      <fieldset class="audience-fieldset">
+        <legend class="sr-only">选择观戏人群</legend>
+        <div class="audience-grid">
+          <label class="audience-card">
+            <input type="radio" name="audience" value="fan_rare" checked />
+            <span class="audience-card-inner">
+              <span class="audience-pill">入门友好</span>
+              <span class="audience-title">心头好 · 稀客型</span>
+              <span class="audience-sub">喜欢戏剧，但一年进不了几次现场，多靠视频、读本、切片解馋。</span>
+              <span class="audience-detail">最轻量卷：不问阅读量、不考背诵，全是「假如我真的坐进剧场」的直觉题。</span>
+              <span class="audience-count-line"><strong data-audience-count="fan_rare">32</strong> 道题</span>
+            </span>
+          </label>
+          <label class="audience-card">
+            <input type="radio" name="audience" value="curious" />
+            <span class="audience-card-inner">
+              <span class="audience-pill">适中</span>
+              <span class="audience-title">名段略懂型 · 课表选手</span>
+              <span class="audience-sub">上过戏剧课、看过节选或解说，知道几部大作在讲什么，现场不算多。</span>
+              <span class="audience-detail">再加一点生活向轮换题：拼票、选座、溢价梗都有；不放最密的课纲专名词轰炸。</span>
+              <span class="audience-count-line"><strong data-audience-count="curious">40</strong> 道题</span>
+            </span>
+          </label>
+          <label class="audience-card">
+            <input type="radio" name="audience" value="regular" />
+            <span class="audience-card-inner">
+              <span class="audience-pill">全场梗</span>
+              <span class="audience-title">现场常驻型 · 老观众</span>
+              <span class="audience-sub">一月好几场，抢票、卡司、中场吐槽都熟，剧场规则不用人教。</span>
+              <span class="audience-detail">题量最全：习惯 + 生活 + 莎士比亚 / 易卜生 / 布莱希特等文本向梗，给坐得住冷板凳的你。</span>
+              <span class="audience-count-line"><strong data-audience-count="regular">52</strong> 道题</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="button" class="btn primary" id="btn-start">就这套，开灯入场</button>
+    </section>
+
+    <section id="screen-quiz" class="card quiz-card hidden" aria-labelledby="quiz-heading">
+      <div class="quiz-top">
+        <div>
+          <span id="quiz-heading" class="q-chip">答题中</span>
+          <p id="quiz-profile" class="quiz-profile"></p>
+        </div>
+        <span class="q-progress-num"><span id="q-current">1</span> / <span id="q-total">32</span></span>
+      </div>
+      <div class="progress-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-a11y">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <h2 id="q-prompt" class="q-title"></h2>
+      <div id="q-options" class="options" role="listbox" aria-labelledby="q-prompt"></div>
+      <div class="nav-row">
+        <button type="button" class="btn ghost" id="btn-prev">上一题</button>
+        <button type="button" class="btn ghost primary-lite" id="btn-next" disabled>下一题</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="hidden" aria-live="polite">
+      <div class="card result-hero">
+        <div class="result-figure-wrap" aria-hidden="true">
+          <img id="res-figure-img" class="result-figure-img hidden" alt="" width="240" height="288" decoding="async" />
+          <svg class="result-figure" id="res-figure-svg" width="240" height="288" viewBox="0 0 100 120" role="img"
+            data-sprites="{{ url_for('static', filename='img/personas.svg') }}">
+            <use id="res-figure-use" href="{{ url_for('static', filename='img/personas.svg') }}#UNKNOWN" />
+          </svg>
+        </div>
+        <p class="eyebrow">你的主类型 · 代号</p>
+        <h2 id="res-code" class="code"></h2>
+        <p id="res-name" class="res-name"></p>
+        <p id="res-dramatic" class="res-dramatic" hidden></p>
+        <p id="res-match" class="match"></p>
+        <p id="res-tagline" class="tagline"></p>
+        <div id="axis-tags" class="axis-tags"></div>
+      </div>
+
+      <div class="card result-extra">
+        <details class="details-block" open>
+          <summary class="details-summary">十五个观剧心理侧写 <span class="hint">（条柱越高越明显；下附与戏剧现场相关的说明，仅供自嗨）</span></summary>
+          <div id="sub-bars" class="sub-bars"></div>
+        </details>
+        <p class="result-footnote">数值按本题库理论上限归一，仅供横向自嗨；不构成任何心理诊断、临床或人格「定论」。</p>
+        <div class="nav-row">
+          <button type="button" class="btn ghost" id="btn-restart">返场 · 重测</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
